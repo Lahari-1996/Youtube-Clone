@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/dcc502fc2e.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <style>
+       
+        #navbar{
+          width: 100%;
+          height: 11%;
+          background: white;
+          position: fixed;
+          top: 0;
+          left: 0;
+          display: flex;
+        }
+      
+        #left{
+            width: 14%;
+          height: 100%;
+          
+        }
+        #right{
+            width: 83%;
+          height: 100%;
+          margin-left: 48px;
+        margin-top: -4px;
+         
+        }
+        #right>hr{
+            margin-top: 7px;
+        }
+       
+     #lin{
+       width: 40px;
+       height: 40px;
+       margin-left: 20px;
+       margin-top: 10px;
+     
+        }
+
+        #lin>i{
+            font-size: 30px;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+
+        #logo{
+            width: 120px;
+            height:40px;
+            margin-left: 80px;
+            margin-top: -40px;
+        }
+        #logo>img{
+            width: 100%;
+        }
+
+        #query{
+            width: 50%;
+            height: 60%;
+            margin-left: 6%;
+            margin-top: 0;
+        
+        }
+        #btn{
+            width: 7%;
+            height: 70%;
+            margin-top:12px;
+            margin-left:-5px;
+        }
+       
+        #mic{
+            width: 40px;
+            height: 40px;
+            background-color: rgb(237, 242, 247);
+            margin-top:-42px;
+            margin-left:64.5%;
+            border-radius: 50%;
+            
+        }
+        #mic>i{
+            margin-top: 10px;
+            margin-left: 12px;
+            font-size: 20px;
+        }
+        #vdo{
+            width: 40px;
+            height: 40px;
+           
+            margin-top:-35px;
+            margin-left:78%;
+         
+        }
+        #vdo>i{
+          font-size: 30px;
+        }
+        #app{
+            width: 40px;
+            height: 40px;
+           
+            margin-top:-40px;
+            margin-left:84%;
+        }
+        #app>i{
+          font-size: 30px;
+        }
+
+        #bell{
+            width: 40px;
+            height: 40px;
+           
+            margin-top:-40px;
+            margin-left:89%;
+        }
+        #bell>i{
+          font-size: 30px;
+        }
+        #dp{
+            width: 40px;
+            height: 40px;
+           border-radius: 50%;
+            margin-top:-45px;
+            margin-left:94%;
+        }
+        #dp>img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+       
+        
+       #nav2{
+          width: 82%;
+          height: 10%;
+          margin-top: 60px;
+          margin-left: 240px;
+          background: white;
+         
+          border-bottom: 1px solid grey;
+          position: fixed;
+          top: 0;
+          left: 0;
+          display:flex;
+          align-items: center;
+          justify-content: space-around;
+          padding-left: 15px;
+          padding-right: 15px;
+       }
+       #nav2>div{
+           width:max-content;
+           min-width: max-content;
+           border-radius: 20px;
+           padding: 10px;
+           background-color: rgb(186, 185, 185);
+           font-size: 20px;
+           text-align: center;
+           margin-right: 15px;
+        }
+       #lower{
+           display: flex;
+           
+       }
+       #rightlower{
+        width: 83%;
+       }
+       #rightlower>hr{
+        margin-top: 10px;
+        
+       }
+#right>hr{
+    color: gray;
+}
+        #results{
+            width: 97%;
+            margin-top:8.6%;
+            margin-right: 2px;
+            margin-left:20px ;
+            background-color: rgb(236, 236, 236);
+            padding:20px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:20px
+            
+        }
+        #results>div{
+            padding-top: 10px;
+        }
+        #results>div>img{
+            width: 100%;
+        
+        }
+        h3{
+            cursor: pointer;
+        }
+
+        #sidenav{
+            width: 16%;
+            height: 1000px;
+            margin-top: 70px;
+            padding-bottom: 20px;
+            left: -10px;
+            
+        overflow-x: hidden;
+        overflow-y:scroll;
+        -ms-overflow-style: none;
+        scrollbar-width:1px;
+       
+        }
+        p{
+            margin-top: -28px;
+            margin-left: 60px;
+        }
+        #sidenav>div{
+            width:100%;
+            height: 45px;
+            font-size: 18px;
+         
+        }
+        #home{
+            background-color: rgb(215, 216, 218);
+        }
+        #home>i, #explore>i, #subscriptions>i,#shorts>i{
+            font-size: 25px;
+            margin-top: 10px;
+            margin-left: 15px;
+           
+        }
+       
+        #subscriptions{
+       margin-bottom: 15px;
+        }
+       
+      #library{
+          margin-top: 15px;
+      }
+      #library>i, #history>i, #yourvideos>i, #watchlater>i,#liked>i{
+            font-size: 25px;
+            margin-top: 10px;
+            margin-left: 15px;
+        }
+      
+       
+        #liked{
+            margin-bottom: 15px;
+        }
+        #sub{
+            margin-top: 10px;
+            margin-left: 15px;
+        }
+        #more{
+            margin-top: 10px;
+            margin-left: 15px;
+        }
+       
+        h5{
+            font-size: 15px;
+           
+        }
+        #premium>i,#movie>i,#game>i,#live>i,#fashion>i,#learn>i,#milt>i{
+            font-size: 25px;
+            margin-top: 10px;
+            margin-left: 15px;
+        }
+        #setting>i,#history>i,#helps>i,#feedback>i{
+            font-size: 25px;
+            margin-top: 10px;
+            margin-left: 15px;
+        }
+       
+        #para{
+           
+          margin-top: 15px;
+        }
+        #para>p{
+            color: gray;
+            margin-top: 20px;
+            margin-left:15px ;
+        }
+     
+       
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="left">
+            <div id="lin"><i class="material-icons">dehaze</i></div>
+            <div id="logo"><img src="https://www.xda-developers.com/files/2017/08/After-12-Years-Google-Gives-YouTube-a-New-Logo-810x298_c.png" alt="">
+            </div>
+        </div>
+
+        <div id="right">
+           
+                <input type="text" id="query">
+                <button id="btn" onclick="search()"><i class="fa fa-magnifying-glass"></i></button>
+                <div id="mic"><i class="fa fa-microphone"></i></div>
+                <div id="vdo"><i class="material-icons">videocam</i></div>
+                <div id="app"><i class="material-icons">apps</i></div>
+                <div id="bell"><i class="material-icons">notifications</i></div>
+                <div id="dp"><img src="https://pinkroom-main.s3.amazonaws.com/8c4a18d3-f29c-46b4-b07d-f3c54deb47a4.jpeg" alt=""></div>
+               <hr>
+        </div>
+    </div>
+    
+   
+
+    
+   
+    <div id="lower">
+        <div id="sidenav">
+            <div id="home"><i class="material-icons">home</i><p>Home</p></div>
+            <div id="explore"><i class="material-icons">explore</i><p>Explore</p></div>
+            <div id="shorts"><i class="material-icons">timeline</i><p>Shorts</p></div>
+            <div id="subscriptions"><i class="material-icons">subscriptions</i><p>Subscriptions</p></div>
+    
+            <hr>
+    
+           <div id="library"><i class="material-icons">video_library</i><p>Library</p></div>
+           <div id="history"><i class="material-icons">history</i><p>History</p></div>
+           <div id="yourvideos"><i class="material-icons">slideshow</i><p>Your videos</p></div>
+           <div id="watchlater"><i class="material-icons">schedule</i><p>Watch later</p></div>
+           <div id="liked"><i class="material-icons">thumb_up</i><p>Liked videos</p></div>
+    
+           <hr>
+    
+           
+           
+           <h5 id="more">MORE FROM YOUTUBE</h5>
+            <div id="premium"><i class="material-icons">smart_display</i><p>TouTube Premium</p></div>
+            <div id="movie"><i class="material-icons">theaters</i><p>Movies</p></div>
+            <div id="game"><i class="material-icons">sports_esports</i><p>Gaming</p></div>
+            <div id="live"><i class="material-icons">sensors</i><p>Live</p></div>
+            <div id="fashion"><i class="material-icons">styler</i><p>Fashion</p></div>
+            <div id="learn"><i class="material-icons">school</i><p>Learning</p></div>
+            <div id="milt"><i class="material-icons">military_tech</i><p>Sports</p></div>
+            <hr>
+
+            
+            <div id="setting"><i class="material-icons">settings</i><p>Settings</p></div>
+            <div id="history"><i class="material-icons">flag</i><p>Report history</p></div>
+            <div id="helps"><i class="material-icons">help</i><p>Help</p></div>
+            <div id="feedback"><i class="material-icons">rate_review</i><p>Send feedback</p></div>
+            <hr>
+            <div id="para">
+                <p>About Press Copyright Contact us Creators Advertise Developers</p>
+                <p>Terms Privacy Policy & Safety How YouTube works Test new features</p>
+                <p>@ 2022 Google LLC</p>
+            </div>
+            
+        </div>
+    
+       
+
+      <div id="rightlower">
+        <div id="nav2">
+            <div>All</div>
+            <div>Music video</div>
+            <div>Mixes</div>
+            <div>Comedies</div>
+            <div>Remix</div>
+            <div>Trend</div>
+            <div>T-Series</div>
+            <div>Recently uploaded</div>
+            <div>Watched</div>
+            <div>New to you</div>
+            
+       </div>
+       <hr>
+       
+      
+   
+       <div id="results"></div>
+       </div>
+    </div>
+        
+       
+       
+   
+        
+    
+    
+</body>
+</html>
+<script>
+let api_key=`AIzaSyCQ_aW5hzSqY2HW4rWJ59iOHOx2Ki9uG1o`;
+
+let search=async () =>{
+    try{
+        let query=document.getElementById("query").value;
+        let url=`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${query}&key=${ api_key}`;
+        let res=await fetch(url);
+        let data=await res.json();
+        console.log(data);
+        append(data.items);
+    }
+    catch(error){
+       console.log(error);
+    }
+}
+
+let append=(data) =>{
+    let card=document.getElementById("results");
+    card.innerHTML=null;
+    data.forEach(({id:{videoId},snippet:{title,thumbnails:{default:{url}}}}) => {
+        let div=document.createElement("div");
+        let image=document.createElement("img");
+        image.src=url;
+       
+        let h4=document.createElement("h4");
+        h4.innerText=title;
+
+        div.append(image,h4);
+        card.append(div); 
+        let video={
+            title,
+            videoId,
+        }
+       div.onclick=()=>{
+           playVideo(video)
+       }
+          
+    });
+
+
+}
+
+let playVideo=(video)=>{
+window.localStorage.setItem("video",JSON.stringify(video));
+window.location.href="youtubeVideo.html";
+
+}
+
+let populars=async()=>{
+    try{
+        let url=`https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=20&regionCode=IN&key=AIzaSyCQ_aW5hzSqY2HW4rWJ59iOHOx2Ki9uG1o` 
+
+        let res=await fetch(url);
+        let data=await res.json();
+        console.log(data.items)
+        append(data.items)
+    }
+    catch(err){
+        console.log(err);
+    }
+}
+
+populars();
+</script>
+
+
+
